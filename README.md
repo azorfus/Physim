@@ -1,1 +1,2 @@
 # Physim
+Structure/Physics simulator
