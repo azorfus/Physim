@@ -1,0 +1,58 @@
+
+*** These modified files were found in JOE when it aborted on Tue Jun  1 21:21:27 2021
+*** JOE was aborted by UNIX signal 1
+
+*** File 'physim.cpp'
+#include "physim.h"
+#include "scene.h"
+#include "particle.h"
+
+Physim::Physim()
+{
+	window = new Fl_Double_Window(640, 420, "physim");
+	window->size_range(640, 420);
+	menubar = new Fl_Menu_Bar(0, 0, 640, 20);
+	menubar->add("&File");
+	menubar->add("&View");
+	menubar->add("&About");
+	pcount = 0;
+    scene = new Scene(5, 25, window->w()-10, window->h()-30);
+	scene->parent = this;
+	Fl_Scroll scr(10, 10, window->w()-10, window->h()-30);
+	window->resizable(scene);
+	window->show();
+	//scene->resize(5, 25, window->w()-10, window->h()-30);
+	//scene->draw();
+
+}
+
+// Updates happen here, mainly the particle updates for now. 
+void Physim::update()
+{
+	for(int i=0;i<pcount;i++)
+	{
+		if(i<=100) // 100 is the default particle limit, might be user modifyable in the future.
+		{
+			particles[i]->update(this);	
+		}
+	}
+}
+
+*** File '(Unnamed)'
+game.cpp
+game.cpp
+game.cpp
+monsoon_winters.cpp
+monsoon_winters.cpp
+../Zerl/lex.c
+../Zerl/src/lex.c
+monsoon_winters.cpp
+Makefile
+particle.cpp
+physim.cpp
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

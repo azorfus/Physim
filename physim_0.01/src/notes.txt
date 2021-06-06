@@ -1,0 +1,20 @@
+Physics/Structure Simulator.
+Author: azorfus
+
+To-do:
+-> Make scene resizable
+-> Add scrollbars
+-> Add ground
+-> Add particle velocity
+-> Resize scene to desired length
+-> Fix mouse position inaccuracies
+-> Add graphics view then add scene to it
+
+Scroll errors:
+#1 Not only one scene.
+#2 no bottom scroll bar.
+
+Added particle class.
+Added toolbar.
+Added scroll bar.
+Fixed scroll bar error #1.
